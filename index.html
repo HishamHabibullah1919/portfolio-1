@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Mukul — Frontend Developer</title>
+  <meta name="description" content="Portfolio of Alex Rivera, a Frontend Developer crafting fast, accessible web experiences.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Google Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (code/status accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION BAR ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand logo" href="#home">
+        <span class="logo-bracket">&lt;</span>Md Mukul<span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-outline-nav" href="#contact">Let's Talk</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <header id="home" class="hero-section">
+    <!-- Ambient gradient blobs -->
+    <div class="blob blob-one" aria-hidden="true"></div>
+    <div class="blob blob-two" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left: Text Content -->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <p class="hero-eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available for freelance work
+          </p>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="hero-name-highlight">Md Mukul</span>
+          </h1>
+          <h2 class="hero-title">Frontend Developer &amp; UI Engineer</h2>
+
+          <p class="hero-intro">
+            I build fast, accessible, and delightful interfaces for the web.
+            Currently focused on crafting design systems and pixel-precise
+            experiences with clean, maintainable code.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta d-flex flex-wrap gap-3">
+            <a href="#" download class="btn btn-primary-glow">
+              <i class="bi bi-download me-2"></i>Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline-glow">
+              <i class="bi bi-chat-dots me-2"></i>Contact Me
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="hero-socials">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Image -->
+        <div class="col-lg-5 order-1 order-lg-2 text-center">
+          <div class="profile-frame mx-auto">
+            <img src="images/profile.jpg"
+                 alt="Portrait of Mukul" class="profile-img">
+            <span class="frame-ring" aria-hidden="true"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Date & Time — Terminal Status Bar (signature element) -->
+      <div class="terminal-bar glass-card">
+        <div class="terminal-dot terminal-red"></div>
+        <div class="terminal-dot terminal-yellow"></div>
+        <div class="terminal-dot terminal-green"></div>
+        <span class="terminal-label">local_time.sh</span>
+        <span class="terminal-output" id="liveDateTime">Loading current time…</span>
+        <span class="terminal-cursor" aria-hidden="true">▍</span>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#projects" class="scroll-indicator" aria-label="Scroll to projects">
+      <i class="bi bi-chevron-down"></i>
+    </a>
+  </header>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section id="projects" class="section-block">
+    <div class="container">
+      <p class="section-eyebrow">Selected Work</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="row g-4 mt-2">
+
+        <div class="col-md-6 col-lg-4">
+          <article class="glass-card project-card h-100">
+            <div class="project-thumb" style="--thumb-a:#4CE0D2; --thumb-b:#7C6FF0;">
+              <i class="bi bi-cart-check"></i>
+            </div>
+            <h3 class="project-title">Commerce Dashboard</h3>
+            <p class="project-desc">A real-time analytics dashboard for online stores, built with a component-driven architecture.</p>
+            <div class="project-tags">
+              <span class="tag">Bootstrap 5</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="glass-card project-card h-100">
+            <div class="project-thumb" style="--thumb-a:#7C6FF0; --thumb-b:#F7A44C;">
+              <i class="bi bi-chat-square-text"></i>
+            </div>
+            <h3 class="project-title">Realtime Chat App</h3>
+            <p class="project-desc">A responsive messaging interface with live typing indicators and smooth micro-interactions.</p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="glass-card project-card h-100">
+            <div class="project-thumb" style="--thumb-a:#F7A44C; --thumb-b:#4CE0D2;">
+              <i class="bi bi-map"></i>
+            </div>
+            <h3 class="project-title">Travel Planner UI</h3>
+            <p class="project-desc">An itinerary builder with drag-friendly cards and a clean, map-first layout.</p>
+            <div class="project-tags">
+              <span class="tag">Bootstrap 5</span>
+              <span class="tag">ES6</span>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section id="skills" class="section-block section-alt">
+    <div class="container">
+      <p class="section-eyebrow">Toolbox</p>
+      <h2 class="section-title">Skills</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-filetype-html skill-icon"></i>
+            <p class="skill-name">HTML5</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-filetype-css skill-icon"></i>
+            <p class="skill-name">CSS3</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-filetype-js skill-icon"></i>
+            <p class="skill-name">JavaScript</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-bootstrap-fill skill-icon"></i>
+            <p class="skill-name">Bootstrap 5</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-git skill-icon"></i>
+            <p class="skill-name">Git &amp; GitHub</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-phone skill-icon"></i>
+            <p class="skill-name">Responsive UI</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-palette skill-icon"></i>
+            <p class="skill-name">UI/UX Design</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card skill-card text-center h-100">
+            <i class="bi bi-speedometer2 skill-icon"></i>
+            <p class="skill-name">Performance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="section-block">
+    <div class="container">
+      <div class="glass-card contact-card text-center mx-auto">
+        <p class="section-eyebrow justify-content-center">Get In Touch</p>
+        <h2 class="section-title">Let's build something great</h2>
+        <p class="contact-text">
+          Have a project in mind or just want to say hi? My inbox is always open.
+        </p>
+        <a href="mailto:hello@alexrivera.dev" class="btn btn-primary-glow">
+          <i class="bi bi-envelope me-2"></i>hello@alexrivera.dev
+        </a>
+
+        <div class="hero-socials justify-content-center mt-4">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-0">&copy; <span id="currentYear"></span> Alex Rivera. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/index.js"></script>
+</body>
+</html>
